@@ -27,6 +27,8 @@
 
 2.  Visit http://localhost:8080
 
+    ![Usage example](docs/assets/usage-example.png "Usage example")
+
 ---
 
 ## Requirements
