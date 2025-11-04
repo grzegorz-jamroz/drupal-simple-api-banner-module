@@ -46,7 +46,7 @@
       "repositories": [
         {
           "type": "vcs",
-          "url": "https://github.com/grzegorz-jamroz/drupal-simple-api-banner"
+          "url": "https://github.com/grzegorz-jamroz/drupal-simple-api-banner-module"
         }
       ],
     ```
@@ -54,7 +54,7 @@
 2.  **Install module running following command:**
 
     ```bash
-    composer require grzegorz-jamroz/drupal-simple-api-banner
+    composer require grzegorz-jamroz/drupal-simple-api-banner-module
     ```
 
 3.  **Enable the Module**
