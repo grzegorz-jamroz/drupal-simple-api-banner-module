@@ -67,13 +67,14 @@ composer require grzegorz-jamroz/drupal-simple-api-banner-module
 
 # 5. Enable module
 echo "Enabling Simple API Banner Module..."
-# drush en simple_api_banner -y
+drush en simple_api_banner -y
 echo "Simple API Banner Module enabled."
 
 # 6. Add simple_api_banner_block to a content region in the Claro theme
-# echo "Adding Simple API Banner block to Claro Content region..."
-# drush php:eval "use \Drupal\block\Entity\Block; Block::create(['id' => 'claro_simpleapibanner', 'theme' => 'claro', 'region' => 'content', 'plugin' => 'simple_api_banner_block', 'settings' => ['label' => 'Simple API Banner', 'label_display' => 'visible']])->save();"
-# echo "Block Simple API Banner added to Claro Content region."
+echo "Adding Simple API Banner block to Claro Content region..."
+drush php:eval "use \Drupal\block\Entity\Block; Block::create(['id' => 'claro_simpleapibanner', 'theme' => 'claro', 'region' => 'highlighted', 'plugin' => 'simple_api_banner_block', 'settings' => ['label' => 'Simple API Banner', 'label_display' => 'visible']])->save();"
+drush php:eval "\$config = \Drupal::configFactory()->getEditable('simple_api_banner.settings'); \$config->set('endpoint_url', 'http://localhost:8080/simple_api_banner_data.php')->set('response_json_text_path', 'content')->set('response_json_author_path', 'author')->set('cache_duration', '1 hour')->save();"
+echo "Block Simple API Banner added to Claro Content region."
 
 # 7. Set correct permissions for the files directory
 echo "Setting file permissions..."
