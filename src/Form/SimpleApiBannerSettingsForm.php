@@ -27,7 +27,7 @@ class SimpleApiBannerSettingsForm extends ConfigFormBase
       '#type' => 'url',
       '#title' => $this->t('API Endpoint URL'),
       '#description' => $this->t('The API endpoint URL (e.g., `https://api.quotable.io/random`)'),
-      '#default_value' => $config->get('endpoint_url') ?? 'https://api.quotable.io/random',
+      '#default_value' => $config->get('endpoint_url') ?? '',
     ];
 
     $form['response_json_text_path'] = [
