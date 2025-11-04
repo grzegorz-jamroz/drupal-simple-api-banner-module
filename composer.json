@@ -1,0 +1,13 @@
+{
+  "name": "grzegorz-jamroz/drupal-simple-api-banner-module",
+  "description": "Module provides a configurable block that fetches data from a simple external JSON API and displays it in a banner",
+  "type": "drupal-custom-module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Grzegorz Jamróz",
+      "email": "grzegorz.jamrooz@gmail.com"
+    }
+  ]
+}
