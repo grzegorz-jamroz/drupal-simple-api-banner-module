@@ -21,14 +21,14 @@ services:
     container_name: simple-api-banner-drupal-app
     ports:
       - "8080:80"
-#    volumes:
-#      - ./config:/var/www/html/custom/module/simple-api-banner/config
-#      - ./src:/var/www/html/custom/module/simple-api-banner/src
-#      - ./templates:/var/www/html/custom/module/simple-api-banner/templates
-#      - ./simple_api_banner.info.yml:/var/www/html/custom/module/simple-api-banner/simple_api_banner.info.yml
-#      - ./simple_api_banner.links.menu.yml:/var/www/html/custom/module/simple-api-banner/simple_api_banner.links.menu.yml
-#      - ./simple_api_banner.routing.yml:/var/www/html/custom/module/simple-api-banner/simple_api_banner.routing.yml
-#      - ./composer.json:/var/www/html/custom/module/simple-api-banner/composer.json
+    volumes:
+      - ./config:/var/www/html/custom/module/simple-api-banner/config
+      - ./src:/var/www/html/custom/module/simple-api-banner/src
+      - ./templates:/var/www/html/custom/module/simple-api-banner/templates
+      - ./simple_api_banner.info.yml:/var/www/html/custom/module/simple-api-banner/simple_api_banner.info.yml
+      - ./simple_api_banner.links.menu.yml:/var/www/html/custom/module/simple-api-banner/simple_api_banner.links.menu.yml
+      - ./simple_api_banner.routing.yml:/var/www/html/custom/module/simple-api-banner/simple_api_banner.routing.yml
+      - ./composer.json:/var/www/html/custom/module/simple-api-banner/composer.json
 #      - ./docker/drupal:/var/www/html/web/sites
     extra_hosts:
       - "host.docker.internal:host-gateway"

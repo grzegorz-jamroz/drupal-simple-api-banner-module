@@ -1,0 +1,5 @@
+name: Simple API Banner
+type: module
+description: Module provides a configurable block that fetches data from a simple external JSON API and displays it in a banner.
+package: Custom
+core_version_requirement: ^11

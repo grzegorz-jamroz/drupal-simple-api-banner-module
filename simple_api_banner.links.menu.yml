@@ -1,0 +1,6 @@
+simple_api_banner.settings_form:
+  title: 'Simple API Banner Settings'
+  description: 'Configure fetch data endpoint and cache duration.'
+  parent: system.admin_config_content
+  route_name: simple_api_banner.settings_form
+  weight: 100

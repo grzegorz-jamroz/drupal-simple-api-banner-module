@@ -55,15 +55,17 @@ RUN a2enmod rewrite
 COPY ./docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
+COPY ./docker/simple_api_banner_data.php /var/www/html/web/simple_api_banner_data.php
+
 RUN mkdir -p "/var/www/html/custom/module/simple-api-banner"
 COPY ./config /var/www/html/custom/module/simple-api-banner/config
 COPY ./src /var/www/html/custom/module/simple-api-banner/src
 COPY ./templates /var/www/html/custom/module/simple-api-banner/templates
 COPY ./composer.json /var/www/html/custom/module/simple-api-banner/composer.json
 COPY ./simple_api_banner.info.yml /var/www/html/custom/module/simple-api-banner/simple_api_banner.info.yml
-COPY ./simple_api_banner.libraries.yml /var/www/html/custom/module/simple-api-banner/simple_api_banner.libraries.yml
 COPY ./simple_api_banner.links.menu.yml /var/www/html/custom/module/simple-api-banner/simple_api_banner.links.menu.yml
 COPY ./simple_api_banner.routing.yml /var/www/html/custom/module/simple-api-banner/simple_api_banner.routing.yml
+COPY ./simple_api_banner.services.yml /var/www/html/custom/module/simple-api-banner/simple_api_banner.services.yml
 RUN sudo chown -R 1000:1000 /var/www/html
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

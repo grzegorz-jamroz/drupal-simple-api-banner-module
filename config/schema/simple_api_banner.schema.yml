@@ -1,0 +1,16 @@
+simple_api_banner.settings:
+  type: config_object
+  label: 'Simple API Banner Settings'
+  mapping:
+    endpoint_url:
+      type: string
+      label: 'API Endpoint URL'
+    response_json_text_path:
+      type: string
+      label: 'Response JSON Text Path'
+    response_json_author_path:
+      type: string
+      label: 'Response JSON Author Path'
+    cache_duration:
+      type: string
+      label: 'Cache Duration'

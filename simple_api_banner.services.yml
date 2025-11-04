@@ -1,0 +1,11 @@
+services:
+  simple_api_banner.config:
+    class: 'Drupal\simple_api_banner\Service\SimpleApiBannerConfig'
+    arguments:
+      - '@config.factory'
+  simple_api_banner.client:
+    class: 'Drupal\simple_api_banner\Service\SimpleApiBannerClient'
+    arguments:
+      - '@http_client'
+      - '@simple_api_banner.config'
+      - '@cache.default'

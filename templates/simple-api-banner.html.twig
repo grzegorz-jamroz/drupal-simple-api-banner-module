@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for the Simple Api Banner.
+#}
+{% block simple_api_banner %}
+  <div {{ attributes.addClass('simple-api-banner') }}>
+    {% block simple_api_banner_text %}
+      {% if author %}
+      <blockquote class="simple-api-banner__text">
+        {{ text|e }}
+      </blockquote>
+      {% endif %}
+    {% endblock %}
+    {% block simple_api_banner_author %}
+      {% if author %}
+        <footer class="simple-api-banner__author">
+          &mdash; {{ author|e }}
+        </footer>
+      {% endif %}
+    {% endblock %}
+  </div>
+{% endblock %}

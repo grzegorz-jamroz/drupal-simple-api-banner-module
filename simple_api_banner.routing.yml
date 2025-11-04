@@ -1,0 +1,7 @@
+simple_api_banner.settings_form:
+  path: '/admin/config/content/simple-api-banner'
+  defaults:
+    _form: '\Drupal\simple_api_banner\Form\SimpleApiBannerSettingsForm'
+    _title: 'Simple Api Banner Settings'
+  requirements:
+    _permission: 'administer site configuration'

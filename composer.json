@@ -9,5 +9,9 @@
       "name": "Grzegorz Jamróz",
       "email": "grzegorz.jamrooz@gmail.com"
     }
-  ]
+  ],
+  "require": {
+    "php": ">=8.4",
+    "grzegorz-jamroz/plain-data-transformer": "^1.0"
+  }
 }
