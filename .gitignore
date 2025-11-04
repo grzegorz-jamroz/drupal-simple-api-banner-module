@@ -1,0 +1,8 @@
+.idea
+docker/db
+docker/drupal
+custom
+recipes
+vendor
+web
+composer.lock

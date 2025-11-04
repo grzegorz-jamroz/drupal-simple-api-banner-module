@@ -1,0 +1,41 @@
+services:
+  db:
+    image: mariadb:10.11
+    container_name: simple-api-banner-drupal-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
+      MYSQL_USER: db
+      MYSQL_PASSWORD: db
+#    volumes:
+#      - ./docker/db:/var/lib/mysql
+    networks:
+      - simple-api-banner-drupal-network
+
+  app:
+    environment:
+      - PHP_IDE_CONFIG=serverName=app
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: simple-api-banner-drupal-app
+    ports:
+      - "8080:80"
+#    volumes:
+#      - ./config:/var/www/html/custom/module/simple-api-banner/config
+#      - ./src:/var/www/html/custom/module/simple-api-banner/src
+#      - ./templates:/var/www/html/custom/module/simple-api-banner/templates
+#      - ./simple_api_banner.info.yml:/var/www/html/custom/module/simple-api-banner/simple_api_banner.info.yml
+#      - ./simple_api_banner.links.menu.yml:/var/www/html/custom/module/simple-api-banner/simple_api_banner.links.menu.yml
+#      - ./simple_api_banner.routing.yml:/var/www/html/custom/module/simple-api-banner/simple_api_banner.routing.yml
+#      - ./composer.json:/var/www/html/custom/module/simple-api-banner/composer.json
+#      - ./docker/drupal:/var/www/html/web/sites
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - db
+    networks:
+      - simple-api-banner-drupal-network
+
+networks:
+  simple-api-banner-drupal-network:
